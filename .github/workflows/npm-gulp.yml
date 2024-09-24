@@ -15,31 +15,36 @@ jobs:
       id-token: write
 
     steps:
-      # Step 1: Checkout the code
-      - name: Checkout code
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
+      - name: Use Node.js 22.x 💻
         uses: actions/setup-node@v4
         with:
-          node-version: "22" # Specify the version of Node.js you want to use
+          node-version: 22.x
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
+      - name: Install & Build 🔧
+        run: |
+          npm install
+          gulp build
 
-      # Step 4: Build the project using Gulp
-      - name: Run Gulp Build
-        run: gulp build
+      - name: Remove symlinks and hard links
+        run: |
+          find ./dist -type l -exec rm \;
 
-      # Step 5: Prepare GitHub Pages deployment environment
-      - name: Setup Pages deployment
-        uses: actions/configure-pages@v4
+      - name: Ensure artifact size is less than 10GB
+        run: |
+          total_size=$(du -sh ./dist | cut -f1)
+          echo "Total size: $total_size"
 
-      # Step 6: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: dist
+          overwrite: true
+
+      - name: Deploy to GitHub Pages 🚀
         uses: actions/deploy-pages@v4
         with:
-          # This should be the folder where your build output is stored
-          publish_dir: ./dist
+          token: ${{ secrets.GITHUB_TOKEN }}
