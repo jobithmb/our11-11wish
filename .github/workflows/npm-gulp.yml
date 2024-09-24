@@ -2,27 +2,37 @@ name: NodeJS with Gulp Workflow
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v4
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-    - name: Use Node.js 22.x 💻
-      uses: actions/setup-node@v4
-      with:
-        node-version: 22.x
+      - name: Use Node.js 22.x 💻
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
 
-    - name: Install & Build 🔧
-      run: |
-        npm install
-        gulp build
+      - name: Install & Build 🔧
+        run: |
+          npm install
+          gulp build
 
-    - name: Deploy to GitHub Pages 🚀
-      uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: actions/deploy-pages@v4
