@@ -1,3 +1,100 @@
 // style.scss
 @import "_vars.scss";
 @import "_global.scss";
+
+body {
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+    margin: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30%;
+        width: 400px;
+        background-image: url('/assets/images/leaves.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: scaleX(-1) scaleY(-1);
+        filter: grayscale(1) brightness(0) opacity(0.25);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 30%;
+        width: 400px;
+        background-image: url('/assets/images/leaves.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(1) brightness(0) opacity(0.25);
+    }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 2px $accent-color;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: solid 2px $accent-color;
+    z-index: 2;
+  }
+}
+
+.hero-names {
+    position: relative;
+    font-family: $cursive-font;
+    font-size: 10rem;
+    color: $accent-color;
+    width: 400px;
+    height: 300px;
+
+    .groom {
+        position: absolute;
+        left: -6rem;
+        top: 0rem;
+    }
+
+    .and {
+        position: absolute;
+        right: 2rem;
+        top: 6rem;
+        font-size: 6rem;
+    }
+
+    .bride {
+        position: absolute;
+        top: 10rem;
+        left: 6rem;
+    }
+}
