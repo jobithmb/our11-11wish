@@ -1,4 +1,4 @@
-name: NodeJS with Gulp Workflow
+name: Gulp Build and Deploy to GH-Pages Workflow
 
 on:
   push:
