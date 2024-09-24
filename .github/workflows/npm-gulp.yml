@@ -15,46 +15,36 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node.js 22.x 💻
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: "22.x" 
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
 
-      - name: Clean dist directory
-        run: rm -rf ./dist
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Install & Build 🔧
-        run: |
-          npm install
-          gulp build
+      - name: Install
+        run: npm install
 
-      - name: Check for symlinks
-        run: |
-          if [ -n "$(find ./dist -type l)" ]; then
-            echo "Symlinks found. Exiting.";
-            exit 1;
-          fi
-
-      - name: Remove symlinks and hard links
-        run: |
-          find ./dist -type l -exec rm \;
-
-      - name: Ensure artifact size is less than 10GB
-        run: |
-          total_size=$(du -sh ./dist | cut -f1)
-          echo "Total size: $total_size"
+      - name: Build 🔧
+        run: npm build
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: ./dist
-          overwrite: true
 
-      - name: Deploy to GitHub Pages 🚀
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
