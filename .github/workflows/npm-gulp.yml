@@ -7,7 +7,7 @@ on:
     branches: ["master"]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,10 +23,20 @@ jobs:
         with:
           node-version: 22.x
 
+      - name: Clean dist directory
+        run: rm -rf ./dist
+
       - name: Install & Build 🔧
         run: |
           npm install
           gulp build
+
+      - name: Check for symlinks
+        run: |
+          if [ -n "$(find ./dist -type l)" ]; then
+            echo "Symlinks found. Exiting.";
+            exit 1;
+          fi
 
       - name: Remove symlinks and hard links
         run: |
@@ -41,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist
+          path: ./dist
           overwrite: true
 
       - name: Deploy to GitHub Pages 🚀
