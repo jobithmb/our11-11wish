@@ -34,7 +34,7 @@ jobs:
 
       - name: Ensure artifact size is less than 10GB
         run: |
-          total_size=$(du -sh ./test-dist | cut -f1)
+          total_size=$(du -sh ./dist | cut -f1)
           echo "Total size: $total_size"
 
       - name: Upload artifact
