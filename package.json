@@ -1,0 +1,16 @@
+{
+  "name": "our11-11wish",
+  "version": "1.0.0",
+  "description": "A wedding website for J+B Wedding on Nov 11, 2024",
+  "main": "index.js",
+  "author": "Jobith M Basheer <jobithmbasheer@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.79.3"
+  }
+}
