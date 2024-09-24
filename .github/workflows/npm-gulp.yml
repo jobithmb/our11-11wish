@@ -28,6 +28,15 @@ jobs:
           npm install
           gulp build
 
+      - name: Remove symlinks and hard links
+        run: |
+          find ./dist -type l -exec rm \;
+
+      - name: Ensure artifact size is less than 10GB
+        run: |
+          total_size=$(du -sh ./test-dist | cut -f1)
+          echo "Total size: $total_size"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
