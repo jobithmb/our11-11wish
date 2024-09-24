@@ -42,3 +42,5 @@ function serve () {
 
 task('default', series(scss, js, html, serve));
 
+task('build', series(scss, js, html));
+
