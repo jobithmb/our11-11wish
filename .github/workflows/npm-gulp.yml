@@ -31,7 +31,7 @@ jobs:
 
       # Step 4: Build the project using Gulp
       - name: Run Gulp Build
-        run: npm run build
+        run: gulp build
 
       # Step 5: Prepare GitHub Pages deployment environment
       - name: Setup Pages deployment
