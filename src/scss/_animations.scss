@@ -1,0 +1,9 @@
+.sway {
+    animation: sway 8s infinite;
+    transform-origin: 50% 100% 0;
+}
+
+@keyframes sway {
+    0%, 100%{ transform: rotate(-6deg);}
+    50%{ transform: rotate(6deg); }
+}
