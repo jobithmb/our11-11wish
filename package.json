@@ -15,6 +15,7 @@
     "sass": "^1.79.3"
   },
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp"
   }
 }

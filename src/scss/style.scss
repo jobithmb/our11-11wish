@@ -79,6 +79,34 @@ body {
     animation: sway 4s infinite 1s;
     transform-origin: 50% 100% 0;
   }
+
+  .flower-top {
+    z-index: 5;
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    height: 400px;
+    width: auto;
+    background-image: url("/assets/images/flower-top.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .flower-bottom {
+    z-index: 5;
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    height: 400px;
+    width: auto;
+    background-image: url("/assets/images/flower-bottom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .card + .card {
