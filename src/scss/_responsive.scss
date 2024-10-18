@@ -1,13 +1,114 @@
 // add breakpoint for tablet devices at 768px
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .card {
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .card + .card {
+    margin-top: 2rem;
+  }
+
+  .card .flowers .flower-top {
+    top: -80px;
+    right: -80px;
+    height: 300px;
+  }
+
+  .card .flowers .flower-bottom {
+    bottom: -80px;
+    left: -80px;
+    height: 300px;
+  }
+
+  .card .flowers.small .flower-top {
+    top: -50px;
+    right: -50px;
+    height: 200px;
+  }
+
+  .card .flowers.small .flower-bottom {
+    bottom: -50px;
+    left: -50px;
+    height: 200px;
+  }
+
+  .card .leaves .leaf-top {
+    top: -100px;
+    left: -50px;
+    width: 200px;
+  }
+
+  .card .leaves .leaf-bottom {
+    bottom: -100px;
+    right: -50px;
+    width: 200px;
+  }
+
+  .text {
+    .wedding {
+      font-size: 1.4rem;
+    }
+
+    .names {
+      font-size: 6rem;
+      width: 400px;
+      height: 200px;
+
+      .groom {
+        left: 2rem;
+        top: 0rem;
+      }
+
+      .and {
+        right: 5rem;
+        top: 3rem;
+        font-size: 4rem;
+      }
+
+      .bride {
+        top: 6rem;
+        left: 7rem;
+      }
+    }
+
+    .save-the-date {
+      font-size: 1.8rem;
+
+      .date {
+        font-size: 2rem;
+      }
+    }
+
+    .venue {
+      font-size: 1.6rem;
+    }
+  }
+
+  .invite {
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+    em {
+      font-size: 1.2rem;
+    }
+
+    .names {
+      font-size: 3rem;
+    }
+  }
+
+  .details {
+    font-size: 1.4rem;
+    .map {
+      height: 300px;
+    }
   }
 }
 
-// add breakpoint for mobile devices at 400px
-@media (max-width: 400px) {
+// add breakpoint for mobile devices at 640px
+@media only screen and (max-width: 640px) {
   .card {
     max-width: 100%;
     margin: 0 auto;
@@ -56,7 +157,7 @@
 
   .text {
     .wedding {
-        font-size: 1rem;
+      font-size: 1rem;
     }
 
     .names {
@@ -82,14 +183,14 @@
     }
 
     .save-the-date {
+      font-size: 1.4rem;
+      .date {
         font-size: 1.4rem;
-        .date {
-            font-size: 1.4rem;
-        }
+      }
     }
 
     .venue {
-        font-size: 1rem;
+      font-size: 1rem;
     }
   }
 
@@ -99,11 +200,11 @@
 
     em {
       font-size: 1rem;
-    }    
+    }
 
     .names {
       font-size: 2rem;
-    }  
+    }
   }
 
   .details {

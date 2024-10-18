@@ -158,6 +158,7 @@ body {
     color: $font-color;
     width: 400px;
     height: 300px;
+    filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
   
     .groom {
       position: absolute;
@@ -187,6 +188,7 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
 
     .save {
       margin-bottom: 1rem;
@@ -202,6 +204,7 @@ body {
       color: $accent-color;
       gap: 1rem;
       font-weight: bold;
+      
 
       .day {
         position: relative;
@@ -260,6 +263,7 @@ body {
     font-style: normal;
     font-weight: bold;
     color: $accent-color;
+    filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
 
     a {
       color: $accent-color;
@@ -276,6 +280,7 @@ body {
     font-size: 3rem;
     color: $accent-color;
     word-spacing: 1rem;
+    filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
   }
 }
 
