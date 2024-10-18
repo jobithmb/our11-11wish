@@ -1,0 +1,115 @@
+// add breakpoint for tablet devices at 768px
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// add breakpoint for mobile devices at 400px
+@media (max-width: 400px) {
+  .card {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .card + .card {
+    margin-top: 1rem;
+  }
+
+  .card .flowers .flower-top {
+    top: -55px;
+    right: -55px;
+    height: 200px;
+  }
+
+  .card .flowers .flower-bottom {
+    bottom: -55px;
+    left: -55px;
+    height: 200px;
+  }
+
+  .card .flowers.small .flower-top {
+    top: -25px;
+    right: -25px;
+    height: 150px;
+  }
+
+  .card .flowers.small .flower-bottom {
+    bottom: -25px;
+    left: -25px;
+    height: 150px;
+  }
+
+  .card .leaves .leaf-top {
+    top: -100px;
+    left: -50px;
+    width: 200px;
+  }
+
+  .card .leaves .leaf-bottom {
+    bottom: -100px;
+    right: -50px;
+    width: 200px;
+  }
+
+  .text {
+    .wedding {
+        font-size: 1rem;
+    }
+
+    .names {
+      font-size: 4rem;
+      width: 300px;
+      height: 150px;
+
+      .groom {
+        left: 3rem;
+        top: 0rem;
+      }
+
+      .and {
+        right: 4rem;
+        top: 3rem;
+        font-size: 3rem;
+      }
+
+      .bride {
+        top: 5rem;
+        left: 7rem;
+      }
+    }
+
+    .save-the-date {
+        font-size: 1.4rem;
+        .date {
+            font-size: 1.4rem;
+        }
+    }
+
+    .venue {
+        font-size: 1rem;
+    }
+  }
+
+  .invite {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+
+    em {
+      font-size: 1rem;
+    }    
+
+    .names {
+      font-size: 2rem;
+    }  
+  }
+
+  .details {
+    font-size: 1rem;
+    .map {
+      height: 200px;
+    }
+  }
+}
