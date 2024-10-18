@@ -105,6 +105,10 @@
       height: 300px;
     }
   }
+
+  .surprise {
+    transform: scale(0.3);
+  }
 }
 
 // add breakpoint for mobile devices at 640px
@@ -212,5 +216,9 @@
     .map {
       height: 200px;
     }
+  }
+
+  .surprise {
+    transform: scale(0.25);
   }
 }
