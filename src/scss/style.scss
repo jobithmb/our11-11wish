@@ -309,12 +309,13 @@ body {
 
   .surprise-text {
     position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
+    top: -300px;
+    left: -215px;
+    width: 200px;
     text-align: center;
     z-index: 999;
     color: $font-color;
+    font-size: 2rem;
   }
 }
 
