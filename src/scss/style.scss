@@ -119,6 +119,19 @@ body {
       background-position: center;
       filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
     }
+
+    &.small {
+      .flower-top {
+        top: -100px;
+        right: -120px;
+        height: 300px;
+      }
+      .flower-bottom {
+        bottom: -100px;
+        left: -120px;
+        height: 300px;
+      }
+    }
   }
 
 }
@@ -232,3 +245,50 @@ body {
   }
 }
 
+.invite {
+  font-size: 1.2rem;
+  color: $font-color;
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 5;
+  font-weight: 300;
+  line-height: 1.4rem;
+
+  em {
+    font-weight: normal;
+    font-style: normal;
+    font-weight: bold;
+    color: $accent-color;
+
+    a {
+      color: $accent-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $font-color;
+  }
+
+  .names {
+    font-family: $cursive-font;
+    font-size: 3rem;
+    color: $accent-color;
+    word-spacing: 1rem;
+  }
+}
+
+.details {
+  z-index: 5;
+  max-width: 70%;
+  font-size: 1.4rem;
+
+  .map {
+    border: none;
+    width: 100%;
+    height: 300px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
