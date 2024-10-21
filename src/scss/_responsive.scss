@@ -10,6 +10,12 @@
     margin-top: 2rem;
   }
 
+  .card .static-butterfly {
+    height: 200px;
+    top: -10px;
+    left:  -5px;
+  }
+
   .card .flowers .flower-top {
     top: -80px;
     right: -80px;
@@ -121,6 +127,12 @@
 
   .card + .card {
     margin-top: 1rem;
+  }
+
+  .card .static-butterfly {
+    height: 150px;
+    top: -10px;
+    left:  -5px;
   }
 
   .card .flowers .flower-top {

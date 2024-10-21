@@ -90,6 +90,17 @@ body {
     }
   }
 
+  .static-butterfly {
+    z-index: 5;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    height: 300px;
+    width: auto;
+    filter: drop-shadow(rgba(0,0,0,0.5) 0.5rem 0.5rem 1rem);
+  }
+
   .flowers {
     .flower-top {
       z-index: 5;
