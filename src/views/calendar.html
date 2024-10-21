@@ -1,0 +1,112 @@
+<html lang="en" style="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J+B Calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <base target="_blank">
+    <script>try {
+            const styledCalendarId = 'WJKKmahL16xYCdvHLFSI';//new URLSearchParams(window.location.search).get("styled-calendar-id"); //WJKKmahL16xYCdvHLFSI
+            if (styledCalendarId) window.styledCalendarPrefetches = {
+                appearanceData: fetch(`https://app.styledcalendar.com/api/get-styled-calendar-appearance-data/?styledCalendarId=${styledCalendarId}`),
+                eventsData: fetch(`https://app.styledcalendar.com/api/get-styled-calendar-events-data/?styledCalendarId=${styledCalendarId}`)
+            };
+        } catch (error) {
+            console.warn("Pre-fetching the Styled Calendar data failed. The app will fall back to an approach with wider browser support. Here is the relevent error: " + error);
+        }</script>
+    <script type="module" crossorigin="" src="/vendor/iframe.js"></script>
+    <link rel="stylesheet" href="/vendor/index.css">
+    <script
+        type="module">try { import.meta.url; import("_").catch(() => 1); } catch (e) { } window.__vite_is_modern_browser = true;</script>
+    <script
+        type="module">!function () { if (window.__vite_is_modern_browser) return; console.warn("vite: loading legacy build because dynamic import or import.meta.url is unsupported, syntax error above should be ignored"); var e = document.getElementById("vite-legacy-polyfill"), n = document.createElement("script"); n.src = e.src, n.onload = function () { System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src')) }, document.body.appendChild(n) }();</script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?display=block&amp;family=Roboto:wght@100;200;300;400;500;600;700;800;900">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?display=block&amp;family=Comfortaa:wght@100;200;300;400;500;600;700;800;900">
+</head>
+
+<body style="margin: 0px; height: auto;" class="">
+    <div id="styled-calendar-container"
+        style="--fc-button-bg-color: #FFD89F; --fc-button-active-bg-color: #FFB64C; --fc-button-hover-bg-color: #FFB64C; --fc-today-bg-color: rgba(255, 216, 159, 0.1); --fc-border-color: #DDDDDD; --sc-main-background-color: #9B4549; --sc-main-padding: 10px; --sc-main-border: 0px solid #000000; --sc-main-border-radius: 0px; --sc-body-font-family: Comfortaa; --sc-title-font-family: Comfortaa; --sc-body-font-size: 18px; --sc-title-font-size: 28px; --sc-body-font-weight: 400; --sc-title-font-weight: 700; --sc-title-font-color: #FFFFFF; --sc-base-body-font-color: #FFFFFF; --sc-title-font-style: normal; --sc-body-font-style: normal; --sc-event-dot-color: #FFD89F; --sc-button-border: 1px solid #ffffff; --sc-button-border-radius: 10px; --sc-button-icons-size: 22px; --sc-grid-event-white-space: nowrap; --sc-block-event-background-color-hovered: rgb(245, 245, 245); --sc-block-event-border: 1px solid rgba(255, 255, 255, 0); --sc-block-event-border-radius: 2.5px; --sc-dot-event-background-color: rgba(255, 255, 255, 0); --sc-dot-event-text-color: #FFFFFF; --sc-dot-event-border: 1px solid rgba(255, 255, 255, 0); --sc-dot-event-border-radius: 2.5px; --sc-grid-day-header-background-color: rgba(255, 255, 255, 0); --sc-list-day-header-background-color: rgba(208, 208, 208, 0.3); --sc-inner-calendar-background-color: rgba(255, 255, 255, 0); --sc-past-day-background-color: rgba(255, 255, 255, 0); --sc-future-day-background-color: rgba(255, 255, 255, 0); --sc-disabled-day-background-color: rgba(208, 208, 208, 0.3); --sc-event-overlay-background-color: #FFFFFF; --sc-event-overlay-padding: 20px; --sc-event-overlay-border: 1px solid #EEEEEE; --sc-event-overlay-border-radius: 4px; --sc-event-overlay-primary-icon-color: #FFD89F; --sc-event-overlay-secondary-icon-color: #000000; --sc-event-overlay-box-shadow: 0px 6px 20px 4px rgb(0 0 0 / 8%); --sc-event-overlay-max-width: 600px; --fc-button-text-color: #9B4549; --sc-dot-event-background-color-hovered: #823B3E;"
+        class="fc fc-media-screen fc-direction-ltr fc-theme-standard">
+        <div aria-labelledby="fc-dom-1" class="fc-view-harness fc-view-harness-passive">
+            <div class="fc-list  fc-list-sticky fc-listMonth-view fc-view">
+                <div class="fc-scroller" style="overflow: visible;">
+                    <table class="fc-list-table ">
+                        <thead>
+                            <tr>
+                                <th scope="col" id="fc-dom-366">Time</th>
+                                <th scope="col" aria-hidden="true"></th>
+                                <th scope="col" id="fc-dom-367">Event</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fc-list-day fc-day fc-day-mon fc-day-future" data-date="2024-11-11">
+                                <th scope="colgroup" colspan="3" id="fc-dom-368-2024-11-11"
+                                    aria-labelledby="fc-dom-369">
+                                    <div class="fc-list-day-cushion fc-cell-shaded"><a id="fc-dom-369"
+                                            class="fc-list-day-text" aria-label="November 11, 2024">November 11,
+                                            2024</a><a aria-hidden="true" class="fc-list-day-side-text"
+                                            aria-label="November 11, 2024">Monday</a></div>
+                                </th>
+                            </tr>
+                            <tr
+                                class="fc-list-event  fc-event fc-event-start fc-event-end fc-event-future source-calendar-google-id-671b9d288ccd254fb0688ced79d4440ac476c6588522fa748bb4ad65993ee9a8@group.calendar.google.com">
+                                <td class="fc-list-event-time">9:30am - 10:30am</td>
+                                <td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot"
+                                        style="border-color: rgb(0, 123, 255);"></span></td>
+                                <td headers="fc-dom-367 fc-dom-368-2024-11-11" class="fc-list-event-title"><a
+                                        tabindex="0">Muhurtham 🪔</a></td>
+                            </tr>
+                            <tr
+                                class="fc-list-event  fc-event fc-event-start fc-event-end fc-event-future source-calendar-google-id-671b9d288ccd254fb0688ced79d4440ac476c6588522fa748bb4ad65993ee9a8@group.calendar.google.com">
+                                <td class="fc-list-event-time">10:30am - 12:30pm</td>
+                                <td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot"
+                                        style="border-color: rgb(0, 123, 255);"></span></td>
+                                <td headers="fc-dom-367 fc-dom-368-2024-11-11" class="fc-list-event-title"><a
+                                        tabindex="0">Photo Session 📸 </a></td>
+                            </tr>
+                            <tr
+                                class="fc-list-event  fc-event fc-event-start fc-event-end fc-event-future source-calendar-google-id-671b9d288ccd254fb0688ced79d4440ac476c6588522fa748bb4ad65993ee9a8@group.calendar.google.com">
+                                <td class="fc-list-event-time">11:30am - 2:00pm</td>
+                                <td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot"
+                                        style="border-color: rgb(0, 123, 255);"></span></td>
+                                <td headers="fc-dom-367 fc-dom-368-2024-11-11" class="fc-list-event-title"><a
+                                        tabindex="0">Lunch 🍱</a></td>
+                            </tr>
+                            <tr
+                                class="fc-list-event  fc-event fc-event-start fc-event-end fc-event-future source-calendar-google-id-671b9d288ccd254fb0688ced79d4440ac476c6588522fa748bb4ad65993ee9a8@group.calendar.google.com">
+                                <td class="fc-list-event-time">2:00pm - 4:00pm</td>
+                                <td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot"
+                                        style="border-color: rgb(0, 123, 255);"></span></td>
+                                <td headers="fc-dom-367 fc-dom-368-2024-11-11" class="fc-list-event-title"><a
+                                        tabindex="0">Travel Time 🚙 Alakode</a></td>
+                            </tr>
+                            <tr
+                                class="fc-list-event  fc-event fc-event-start fc-event-end fc-event-future source-calendar-google-id-671b9d288ccd254fb0688ced79d4440ac476c6588522fa748bb4ad65993ee9a8@group.calendar.google.com">
+                                <td class="fc-list-event-time">4:00pm - 4:30pm</td>
+                                <td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot"
+                                        style="border-color: rgb(0, 123, 255);"></span></td>
+                                <td headers="fc-dom-367 fc-dom-368-2024-11-11" class="fc-list-event-title"><a
+                                        tabindex="0">Court Marriage 💍</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script
+        nomodule="">!function () { var e = document, t = e.createElement("script"); if (!("noModule" in t) && "onbeforeload" in t) { var n = !1; e.addEventListener("beforeload", (function (e) { if (e.target === t) n = !0; else if (!e.target.hasAttribute("nomodule") || !n) return; e.preventDefault() }), !0), t.type = "module", t.src = ".", e.head.appendChild(t), t.remove() } }();</script>
+    <script nomodule="" crossorigin="" id="vite-legacy-polyfill" src="/vendor/polyfills-legacy.js"></script>
+    <script nomodule="" crossorigin="" id="vite-legacy-entry"
+        data-src="/assets/iframe-legacy.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+
+
+    <div style="clear: both; display: block; height: 0px;"></div>
+</body>
+
+</html>

@@ -31,6 +31,10 @@ function static() {
     return src("./src/*").pipe(dest("./dist"));
 }
 
+function vendor() {
+    return src("./src/vendor/*").pipe(dest("./dist/vendor"));
+}
+
 function images() {
     return src("./src/images/**/*.*", {encoding: false}).pipe(dest("./dist/assets/images"));
 }
@@ -55,7 +59,7 @@ function serve () {
     watch("./src/views/**/*.html", html).on('change', browserSync.reload);
 }
 
-task('default', series(scss, js, html, static, images, serve));
+task('default', series(scss, js, html, static, vendor, images, serve));
 
-task('build', series( clear, scss, js, html, static, images));
+task('build', series( clear, scss, js, html, static, vendor, images));
 
