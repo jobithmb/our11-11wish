@@ -17,6 +17,12 @@ function scss() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function js_vendors() {
+    return src("./src/js/vendors/*.js")
+    .pipe(concat("vendors.js"))
+    .pipe(dest("./dist/assets/"));
+}
+
 function js() {
     return src("./src/js/*.js")
     .pipe(concat("script.js"))
@@ -59,7 +65,7 @@ function serve () {
     watch("./src/views/**/*.html", html).on('change', browserSync.reload);
 }
 
-task('default', series(scss, js, html, static, vendor, images, serve));
+task('default', series(scss, js_vendors, js, html, static, vendor, images, serve));
 
-task('build', series( clear, scss, js, html, static, vendor, images));
+task('build', series( clear, scss, js_vendors, js, html, static, vendor, images));
 

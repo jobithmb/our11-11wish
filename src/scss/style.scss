@@ -4,6 +4,7 @@
 @import "_animations.scss";
 @import "_butterfly.scss";
 @import "_instagram.scss";
+@import "_simpleLightbox.min.scss";
 
 body {
   position: relative;
@@ -334,7 +335,7 @@ body {
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  z-index: 9999;
+  z-index: 99;
   display: block;
 
   iframe {
@@ -343,6 +344,31 @@ body {
     aspect-ratio: 16/9;
     margin-bottom: 2rem;
     
+  }
+}
+
+.galleries {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.gallery {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  z-index: 99;
+  height: 80vh;
+  overflow-y: auto;
+
+  .gallery-item img{
+    width: 160px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 }
 

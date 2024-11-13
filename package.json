@@ -5,7 +5,9 @@
   "main": "index.js",
   "author": "Jobith M Basheer <jobithmbasheer@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "simple-lightbox": "^2.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
